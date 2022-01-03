@@ -2,7 +2,7 @@ import string
 from random import *
 
 characters = string.ascii_letters + string.digits + string.punctuation
-input_num = int(input('Enter number of password you want to generate: '))
+input_num = int(input('Enter amount of password you want to generate: '))
 output = open(input('Enter a name for your password file with extention(.txt): '), 'w')
 
 for num in range(input_num):
