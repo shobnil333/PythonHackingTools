@@ -4,9 +4,11 @@ from IPy import IP
 
 def scan(target):
     converted_ip = check_ip(target)
-    print('[+] Scanning Target --')
-    for port in range(1,1000):
+    port_num = int(input('[+] Enter amount of port you want to scan: ').strip())
+    print('\n' + '*** Scanning Target --' + '\n')
+    for port in range(port_num):
         scan_port(converted_ip, port)
+    print('\n' + str(port_num), 'Port scanned Successfully')
 
 
 def check_ip(ip):
@@ -35,5 +37,5 @@ def scan_port(ipaddress, port):
         pass
 
 
-ipaddress = input('[+] Enter Target: ')
+ipaddress = input('[+] Enter Target: ').strip()
 scan(ipaddress)
